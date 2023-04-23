@@ -32,3 +32,4 @@ function clasificarNumeros(numeros: number[]): {positivos: number, negativos: nu
   const resultado = clasificarNumeros(numeros);
   
   console.log(resultado);
+/*NO FUNCIONA*///
