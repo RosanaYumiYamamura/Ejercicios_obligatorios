@@ -1,4 +1,4 @@
-/*Almacene en un arreglo de dimensión N números (la cantidad es ingresada por el usuario). (con funciones) 
+/*Almacene en un arreglo de dimensión N números (la cantidad es ingresada por el usuario). (CON funciones) 
 Muestre cuantos números son positivos, cuantos son negativos y cuantos ceros hay.  
 Ejemplo: 
 v= 0, -7, -9, 1, 0, 0. 
