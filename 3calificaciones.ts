@@ -6,18 +6,23 @@
 //Las notas deben estar entre 0 y 10 (si no lo están, no imprimirá las notas, mostrará un mensaje de error y continuará con otro alumno)
 
 import * as rls from "readline-sync"
-let nota1= rls.questionInt ("ingrese nota 1: ");
-let nota2= rls.questionInt ("ingrese nota 2: ");
-let nota3= rls.questionInt ("ingrese nota 3: ");
-let nombreAlumno= rls.question ("ingrese nombre alumno: ");
-let result=0;
 
-while (nombreAlumno!=""){
-    result= nota1*0.1 + nota2*0.5 + nota3*0.40
-    console.log (result)
-    nombreAlumno=rls.question ("ingrese nombre alumno: ");
-    if(nombreAlumno!=""){
-    nota1= rls.questionInt ("ingrese nota 1: ");
-    nota2= rls.questionInt ("ingrese nota 2: ");
-    nota3= rls.questionInt ("ingrese nota 3: ");}
+let nombre : string = "Alumnos";
+let notaFinal : number;
+let nota1 : number = 0.1;
+let nota2 : number = 0.5;
+let nota3 : number = 0.4;
+
+while(nombre !== ""){
+    nombre = rls.question("Ingrese el nombre del Alumno: ");                                                                                     
+    nota1 = rls.questionInt("Ingrese la nota de practica: ");
+    nota2 = rls.questionInt("Ingrese la nota de problemas: ");
+    nota3 = rls.questionInt("Ingrese la nota de teorica: ");
+
+    if(nota1 <= -1 || nota1 > 11 || nota2 <= -1 || nota2 > 11 || nota3 <= -1 || nota3 > 11){
+        console.log("Error");
+    }else{
+        notaFinal = (nota1 * 0.1 + nota2 * 0.5 + nota3 * 0.4);
+        console.log("La nota final es:", [notaFinal]);
+    }    
 }
